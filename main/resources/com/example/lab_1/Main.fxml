@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="804.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_1.Habitat">
+   <children>
+      <AnchorPane fx:id="AnchorPane" layoutY="225.0" maxHeight="330" maxWidth="804" minHeight="0" minWidth="0" prefHeight="330.0" prefWidth="804.0" style="-fx-background-color: lightblue;">
+         <children>
+            <TextArea fx:id="TxArea" editable="false" layoutX="302.0" layoutY="65.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
+         </children></AnchorPane>
+      <Label fx:id="LabelBoys" layoutX="331.0" layoutY="159.0" prefHeight="26.0" prefWidth="141.0" text="Мальчиков" textFill="#961687">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font></Label>
+      <Label fx:id="LabelTime" layoutX="61.0" layoutY="159.0" prefHeight="26.0" prefWidth="156.0" text="Текущее время" textAlignment="CENTER" textFill="#c42c2c" underline="true">
+         <font>
+            <Font name="Felix Titling" size="13.0" />
+         </font></Label>
+      <Label fx:id="LabelGirls" layoutX="586.0" layoutY="159.0" prefHeight="26.0" prefWidth="127.0" text="Девочек" textFill="#2dcc0d">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Label>
+      <Button fx:id="BtnStart" layoutX="75.0" layoutY="63.0" mnemonicParsing="false" onAction="#start" prefHeight="44.0" prefWidth="84.0" text="Старт" />
+      <Button fx:id="BtnStop" layoutX="197.0" layoutY="63.0" mnemonicParsing="false" onAction="#stop" prefHeight="44.0" prefWidth="84.0" text="Стоп" />
+      <RadioButton fx:id="RBtnNo" layoutX="573.0" layoutY="76.0" mnemonicParsing="false" onAction="#show_btn" text="НЕТ" />
+      <RadioButton fx:id="RBtnYes" layoutX="480.0" layoutY="76.0" mnemonicParsing="false" onAction="#show_btn" text="ДА" />
+      <Label layoutX="499.0" layoutY="28.0" prefHeight="34.0" prefWidth="110.0" text="Показывать время " />
+      <ButtonBar layoutX="-18.0" layoutY="8.0" prefHeight="40.0" prefWidth="200.0">
+         <buttons>
+            <MenuBar fx:id="MenuBar">
+              <menus>
+                <Menu mnemonicParsing="false" onAction="#back_menu" text="Menu">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#back_menu" text="Вернуться в меню?" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Inf">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#show_inf" text="Показать информацию" />
+                  </items>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#dntshow_inf" text="Скрыть информацию" />
+                    </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </buttons></ButtonBar>
+      <Button fx:id="BtnLifeObj" layoutX="321.0" layoutY="65.0" mnemonicParsing="false" onAction="#show_life_obj" prefHeight="40.0" prefWidth="118.0" text="Текущие объекты" />
+      <Button fx:id="BBoy_move" layoutX="436.0" layoutY="122.0" mnemonicParsing="false" onAction="#stop_boy_move" prefHeight="26.0" prefWidth="164.0" text="Выключить дв. мальчиков" />
+      <Button fx:id="BGirl_move" layoutX="623.0" layoutY="122.0" mnemonicParsing="false" onAction="#stop_girl_move" prefHeight="26.0" prefWidth="149.0" text="Выключить дв. девочек" />
+      <Button fx:id="BtnServ" layoutX="338.0" layoutY="14.0" mnemonicParsing="false" onAction="#start_server" prefHeight="40.0" prefWidth="84.0" text="Сервер" />
+   </children>
+</AnchorPane>

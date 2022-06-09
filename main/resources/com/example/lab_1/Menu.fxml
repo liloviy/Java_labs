@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LabelChislo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_1.Habitat">
+   <children>
+      <Label fx:id="LabelMenu" alignment="CENTER" layoutX="240.0" layoutY="23.0" prefHeight="86.0" prefWidth="225.0" style="-fx-background-color: Pink;" text="Главное меню">
+         <font>
+            <Font name="Segoe UI Semibold" size="12.0" />
+         </font></Label>
+      <Label layoutX="213.0" layoutY="227.0" prefHeight="35.0" prefWidth="280.0" text="Время спавна девочек и вероятнось их появления" />
+      <Label layoutX="208.0" layoutY="134.0" prefHeight="35.0" prefWidth="295.0" text="Время спавна мальчиков и вероятнось их появления" />
+      <ComboBox fx:id="CBBoy" layoutX="189.0" layoutY="184.0" prefWidth="150.0" />
+      <Button fx:id="BtnMain" layoutX="295.0" layoutY="345.0" mnemonicParsing="false" onAction="#start_main" style="-fx-background-color: lightgreen;" text="Начать симуляцию" />
+      <TextField fx:id="TimeBoy" layoutX="63.0" layoutY="184.0" onAction="#TimeFix" prefHeight="26.0" prefWidth="96.0" />
+      <TextField fx:id="TimeGirl" layoutX="63.0" layoutY="279.0" onAction="#TimeFix" prefHeight="26.0" prefWidth="96.0" />
+      <ComboBox fx:id="CBGirl" layoutX="189.0" layoutY="280.0" prefWidth="150.0" />
+      <TextField fx:id="TimeLifeBoy" layoutX="369.0" layoutY="183.0" onAction="#LifeFix" prefHeight="26.0" prefWidth="96.0" />
+      <TextField fx:id="TimeLifeGirl" layoutX="369.0" layoutY="279.0" onAction="#LifeFix" prefHeight="26.0" prefWidth="96.0" />
+      <ComboBox fx:id="CBPriorityBoy" layoutX="504.0" layoutY="184.0" onAction="#get_priority_boy" prefWidth="150.0" />
+      <ComboBox fx:id="CBPriorityGirl" layoutX="504.0" layoutY="280.0" onAction="#get_priority_girl" prefWidth="150.0" />
+
+      
+   </children>
+</AnchorPane>
